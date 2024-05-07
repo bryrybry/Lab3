@@ -2,7 +2,6 @@ import Lab3
 
 print("Test_Lab3")
 
-
 def test_bubble_sort_ascending():
     result = []
     input_arr = [64, 34, 25, 12, 22, 11, 90]
@@ -21,6 +20,7 @@ def test_bubble_sort_descending():
 
     assert (result == test_arr)
 
+# when the sorting_order is invalid (can only be 0/SORT_ASCENDING or 1/SORT_DESCENDING)
 def test_bubble_sort_invalid():
     result = []
     input_arr = [64, 34, 25, 12, 22, 11, 90]
@@ -29,7 +29,7 @@ def test_bubble_sort_invalid():
 
     assert (result == [])
 
-def test_bubble_overflow_arr():
+def test_bubble_sort_overflow():
     result = None
     input_arr = [1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
@@ -37,7 +37,7 @@ def test_bubble_overflow_arr():
 
     assert (result == 1)
 
-def test_bubble_empty_arr():
+def test_bubble_sort_empty():
     result = None
     input_arr = []
 
@@ -45,7 +45,7 @@ def test_bubble_empty_arr():
 
     assert (result == 0)
 
-def test_non_integer_arr():
+def test_bubble_sort_noninteger():
     result = None
     input_arr = [1.3, 5.3, 7.8]
 
